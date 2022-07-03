@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "controlalmacen-425d7": {
+      "hosting": {
+        "Proyecto3": [
+          "controlalmacen-425d7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "controlalmacen-425d7"
+  }
+}
