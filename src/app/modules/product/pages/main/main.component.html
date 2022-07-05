@@ -1,0 +1,26 @@
+
+
+  
+  <div class="mat-elevation-z8">
+    <table class="table">
+        <thead class="table-dark">
+            <tr class="text-center">
+                <th> NAME </th>                    
+                <th> QUANTITY </th>                    
+                <th> PRICE </th>                    
+                <th> CATEGORY </th>                    
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let p of dataSource" class="text-center">
+                <td>{{p.name}}</td>
+                <td>{{p.quantity}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.category}}</td>
+            </tr>
+        </tbody>
+        
+    </table>  
+   
+  </div>
+

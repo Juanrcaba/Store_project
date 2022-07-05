@@ -6,20 +6,31 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
+import {AngularFireDatabaseModule} from '@angular/fire/compat/database'
+import { AngularFireModule } from '@angular/fire/compat';
+import { AuthModule } from './modules/auth/auth.module';
+import { FeaturesComponent } from './features/features.component';
+import { FeaturesModule } from './features/features.module';
+import { ProductModule } from './modules/product/product.module';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase())
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AuthModule,
+    FeaturesModule,
+    ProductModule
+
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
