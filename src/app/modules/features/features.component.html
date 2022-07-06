@@ -1,0 +1,20 @@
+<div class="header" >    
+    <mat-toolbar color="primary" class="d-flex justify-content-between px-3">     
+      <span>Storege project</span>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>person</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>exit_to_app</mat-icon>
+          <span>LogOut</span>
+        </button>        
+      </mat-menu>                 
+    </mat-toolbar>    
+</div>
+<div class="outlet p-5">
+<mat-card>
+      <router-outlet class="w-100"></router-outlet>
+    </mat-card>
+</div>
+

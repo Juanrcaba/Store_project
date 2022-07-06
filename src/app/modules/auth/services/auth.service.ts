@@ -27,4 +27,10 @@ export class AuthService {
     this.afauth.sendPasswordResetEmail(email).then(res=>resolve(res)).catch(err=>reject(err.message))
   })
  }
+
+ logOut(){
+  return new Promise((resolve,reject)=>{
+    this.afauth.signOut().then(res=>resolve(res)).catch(error=>reject(error))
+  })
+ }
 }
