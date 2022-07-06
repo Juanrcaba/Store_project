@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Delete Register </h1>
+<div mat-dialog-content>
+  <p>Are you sure do you want delete this register?</p>  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="result" cdkFocusInitial>Ok</button>
+</div>

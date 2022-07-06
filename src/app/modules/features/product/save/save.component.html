@@ -1,0 +1,29 @@
+<div class="contenedor">
+    <h2>{{title}}</h2>
+    <form [formGroup]="dataForm" (ngSubmit)="onSaveData()" novalidate>
+        <mat-form-field  appearance="outline" class="w-25">
+            <mat-label>ID</mat-label>
+            <input matInput readonly  value="" formControlName="id" >
+        </mat-form-field>
+        <mat-form-field  appearance="outline" class="w-100">
+            <mat-label>Product Name</mat-label>
+            <input type="text" focus matInput  value="" placeholder="Product Name" formControlName="name" required>
+        </mat-form-field>
+        <mat-form-field  appearance="outline" class="w-100">
+            <mat-label>Qty</mat-label>
+            <input type="text" matInput  value="" placeholder="Qty" formControlName="qty" required>
+        </mat-form-field>
+        <mat-form-field  appearance="outline" class="w-100">
+            <mat-label>Price</mat-label>
+            <input type="text" matInput  value="" placeholder="Price" formControlName="price" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Select me</mat-label>
+            <mat-select formControlName="category">
+              <mat-option *ngFor="let c of categories" [value]="c" >{{c}}</mat-option>
+            </mat-select>           
+        </mat-form-field>        
+          <button mat-raised-button color="primary"  class="m-1  btn btn-md" style="width: 110px;" [disabled]="!dataForm.valid" >Add Product</button>
+    </form>
+</div>

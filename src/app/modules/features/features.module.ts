@@ -8,6 +8,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 
 
@@ -23,7 +25,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule
   ]
 })
 export class FeaturesModule { }

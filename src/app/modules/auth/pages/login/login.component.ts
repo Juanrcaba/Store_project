@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   onLogin(){
     if(this.loginForm.valid){
      this.auth.loginWithEmailAndPassword(this.loginForm.value.email,this.loginForm.value.password).then(()=>{
-      this.route.navigate(['/main']);
+      this.route.navigate(['/product']);
      })
     }
   }

@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  {path:'',redirectTo:'features',pathMatch:'full'}
+  {path:'',redirectTo:'login',pathMatch:'full'}
   
   // {path:'features', loadChildren:()=>import('./features/features.module').then(m=>m.FeaturesModule)}
 ];

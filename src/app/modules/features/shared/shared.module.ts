@@ -6,10 +6,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
-const modules=[MatToolbarModule,MatButtonModule,MatCardModule,MatInputModule,MatIconModule,ReactiveFormsModule]
+const modules=[MatDialogModule,MatSelectModule,MatFormFieldModule,MatToolbarModule,MatButtonModule,MatCardModule,MatInputModule,MatIconModule,ReactiveFormsModule]
 
 @NgModule({
   declarations: [],
