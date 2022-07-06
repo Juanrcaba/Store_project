@@ -57,8 +57,7 @@ export class ProductComponent implements OnInit {
        })   
        modalRef.afterClosed().subscribe(res=>{    
         if(res){
-          this.db.list('Products').remove(id).then(()=>{            
-          }).catch(err=>console.log(err.message));
+          this.db.list(`Products/${id}`).remove().then( ).catch(err=>console.log(err.message));
         }   
 
        });  

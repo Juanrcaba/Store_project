@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { validateCallback } from '@firebase/util';
 import { AuthService } from '../../services/auth.service';
 
@@ -11,7 +12,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private formBuilder:FormBuilder, private authService:AuthService) { }
+  constructor(private formBuilder:FormBuilder, private authService:AuthService,private route:Router) { }
 
   registerForm!: FormGroup;
 
@@ -24,8 +25,8 @@ export class RegisterComponent implements OnInit {
 
   onCreate(){
     this.authService.createAccount(this.registerForm.value.email,this.registerForm.value.password)
-    .then((response)=>{
-      console.log(response)
+    .then(()=>{
+      this.route.navigate(['features'])
     }).catch(err=>console.log(err.message))
   }
 }

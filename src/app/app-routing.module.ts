@@ -4,9 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  {path:'',redirectTo:'login',pathMatch:'full'}
-  
-  // {path:'features', loadChildren:()=>import('./features/features.module').then(m=>m.FeaturesModule)}
+  {path:'',redirectTo:'features',pathMatch:'full'}  ,
+  //{path:'features', loadChildren:()=>import('./modules/features/features.module').then(m=>m.FeaturesModule)}
 ];
 
 @NgModule({
