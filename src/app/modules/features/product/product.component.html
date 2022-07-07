@@ -1,13 +1,13 @@
 <div class="container-fluid w-100">
 
-    <button mat-flat-button (click)="openModal()" color="primary" class="w-25 mb-3" >New Product</button>
+    <button mat-flat-button (click)="openModal()" color="primary" class="mb-3 mb-md-1" >New Product</button>
     
     <div class="mat-elevation-z8">
         <div class="table-responsive-md">
-            <table class="table">
+            <table class="table table-sm">
                 <thead class="table-dark">
                     <tr class="text-center">
-                        <th >ID</th>
+                        <th hidden>ID</th>
                         <th> NAME </th>                    
                         <th> QUANTITY </th>                    
                         <th> PRICE </th>                    
@@ -17,7 +17,7 @@
                 </thead>
                 <tbody >
                     <tr *ngFor="let p of dataSource" class="text-center">
-                        <td >{{p.id}}</td>
+                        <td hidden>{{p.id}}</td>
                         <td>{{p.name}}</td>
                         <td>{{p.qty}}</td>
                         <td>{{p.price}}</td>
